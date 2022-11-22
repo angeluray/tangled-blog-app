@@ -5,7 +5,7 @@
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse Education</b></h3>
+  <h3><b>Microverse Education project by Angel Uray</b></h3>
 
 </div>
 
@@ -78,7 +78,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> To get a local copy up and running it in your machine, follow the next steps 
+> To get a local copy up and running it in your machine, follow the next steps. 
 
 ### Prerequisites
 
@@ -102,15 +102,24 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install this project with:
+Install almost all dependencies/gems of the project by running:
 
+- This one will install all gems inside GemFile including Rubocop:
 > `Bundle install` or `Bundle i`
+
+- This one will install stylelinter:
+> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
 
 ### Usage
 
 To run the project, execute the following command:
-
 > `rails server` or `rails s`
+
+To run stylinter:
+> `npx stylelint "**/*.{css,scss}"`
+
+To run rubocop:
+> `rubocop`
 
 ### Run tests
 
@@ -122,7 +131,6 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 👤 **Angel Uray**
 
 - GitHub: [@angeluray](https://github.com/angeluray)
@@ -159,8 +167,6 @@ Feel free to check the [issues page](../../issues/).
 
 
 ## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **Can I publish this project as mine?**
 
