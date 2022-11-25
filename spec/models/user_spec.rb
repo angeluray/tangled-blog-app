@@ -51,5 +51,4 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 'This is not a number'
     expect(subject).to_not be_valid
   end
-
 end
