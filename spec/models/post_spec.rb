@@ -63,5 +63,4 @@ RSpec.describe Post, type: :model do
   it 'check_last_five_comments should show the last five comments' do
     expect(subject.check_last_five_comments.length).to be_between(0, 5)
   end
-
 end
