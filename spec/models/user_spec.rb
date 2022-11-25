@@ -51,4 +51,8 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 'This is not a number'
     expect(subject).to_not be_valid
   end
+
+  it 'check_last_three_posts should show the last 3 posts' do
+    expect(subject.check_last_three_posts.length).to be_between(0, 3)
+  end
 end
