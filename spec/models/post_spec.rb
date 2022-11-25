@@ -35,11 +35,6 @@ RSpec.describe Post, type: :model do
     expect(post).to be_valid
   end
 
-  it 'is not valid without a text string' do
-    post.text = nil
-    expect(post).to_not be_valid
-  end
-
   it 'is only valid with a user' do
     post.author = user
     expect(post).to be_valid

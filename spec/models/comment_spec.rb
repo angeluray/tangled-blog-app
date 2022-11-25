@@ -33,11 +33,6 @@ RSpec.describe Comment, type: :model do
     expect(comment).to be_valid
   end
 
-  it 'is not valid without a text' do
-    comment.text = nil
-    expect(comment).to_not be_valid
-  end
-
   it 'is only valid with a user' do
     comment.author = user
     expect(comment).to be_valid

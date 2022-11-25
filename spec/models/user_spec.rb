@@ -37,11 +37,6 @@ RSpec.describe User, type: :model do
     expect(subject).to be_valid
   end
 
-  it 'is not valid if photo is not present' do
-    subject.photo = nil
-    expect(subject).to_not be_valid
-  end
-
   it 'accepts the value if it is a integer' do
     subject.posts_counter = 5
     expect(subject).to be_valid
