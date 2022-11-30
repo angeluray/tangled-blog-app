@@ -19,7 +19,7 @@ RSpec.describe "Posts", type: :request do
       expect(response).to render_template('index')
     end
 
-    it "Checks for post info into the body" do
+    it "Checks for full list of posts info into the body" do
       expect(response.body).to include("<h1>Full list of posts for a given user...</h1>")
     end
   end
@@ -33,6 +33,10 @@ RSpec.describe "Posts", type: :request do
 
     it "Renders the correct template succesfully" do
       expect(response).to render_template('show')
+    end
+
+    it "Checks for single post info into the body" do
+      expect(response.body).to include("<h2>Show specific post for a given user and post id</h2>")
     end
   end
 end
