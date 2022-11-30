@@ -20,9 +20,13 @@ RSpec.describe "Users", type: :request do
     it "Renders the correct template" do
       expect(response).to render_template('index')
     end
+
+    it "Checks for user list info into the body" do
+      expect(response.body).to include("<h1>Full list of users...</h1>")
+    end
   end
 
-  describe "request to show a specific file" do
+  describe "request to show a specific user info" do
     before(:each) { get user_path(@user) }
 
     it 'Gives the exact response' do
@@ -31,6 +35,10 @@ RSpec.describe "Users", type: :request do
 
     it 'Renders the correct template' do
       expect(response).to render_template('show')
+    end
+
+    it "Checks for single user info into the body" do
+      expect(response.body).to include("<h2>Username: Mateo Lane</h2>")
     end
   end
 end
