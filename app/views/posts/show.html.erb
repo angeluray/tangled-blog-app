@@ -1,0 +1,11 @@
+<section>
+    <h2>Show specific post for a given user and post id</h2>
+
+    <ul> 
+        <li>Comments: <%=@post.likes_counter %> </li>
+        <li>Likes: <%=@post.comments_counter %> </li>
+    <ul>
+
+    <h3> <%= @post.title %> <h3>
+    <p> <%= @post.text %> </p>
+</section>

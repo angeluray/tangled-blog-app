@@ -1,0 +1,10 @@
+<section>
+<h1>Full list of users...</h1> 
+<% @users.each do |user| %>
+  <ul>
+    <li><%= link_to user.name, user_path(user) %></li>
+    <li><%= user.photo %></li>
+    <li>Number of Posts: <%= user.posts_counter %></li>
+  </ul>
+<% end %>
+</section>
