@@ -1,0 +1,87 @@
+.single-post {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.single-post_body {
+  width: 40vw;
+  background-color: #fff;
+  border: 2px solid rgba(160, 160, 160, 0.4);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  transition: all ease 0.3s;
+}
+
+.single-post_body:hover {
+  margin-bottom: 20px;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: rgba(46, 240, 59, 0.4) 0 5px, rgba(46, 240, 46, 0.3) 0 10px, rgba(46, 240, 65, 0.2) 0 15px, rgba(46, 240, 53, 0.1) 0 20px, rgba(46, 240, 56, 0.05) 0 25px;
+}
+
+.single-post-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+
+.single-post-header h2 {
+  transition: all ease 0.3s;
+}
+
+.single-post-header h2:hover {
+  color: rgb(33, 187, 33);
+}
+
+.single-post-header h2::first-letter {
+  text-transform: uppercase;
+}
+
+.single-post-counters {
+  display: flex;
+}
+
+.single-post-counters p {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.single-text {
+  background-color: rgba(0, 0, 0, 0.021);
+  margin-top: 30px;
+  padding: 10px;
+  font-weight: 100;
+}
+
+.comments-section li {
+  list-style-type: none;
+}
+
+.single-li {
+  margin-top: 5px;
+}
+
+.single-li h5 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.comments-section h3 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.099);
+}
+
+.single-csection {
+  display: flex;
+  flex-direction: column;
+}

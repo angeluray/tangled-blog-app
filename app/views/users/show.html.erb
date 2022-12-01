@@ -1,25 +1,47 @@
-<section>
-
-  <div>
-    <h2>Username: <%= @user.name %></h2>
-    <p>Number of posts: <%= @user.posts_counter %></p>
-  </div>
+<section class='show-view'>
   
-  <div>
-    <h3>Bio</h3>
+
+  <section class='user-header-section'>
+    <img src='<%= @user.photo %>' alt="<%= @user.name %>'s profile picture"/>
+    <div>
+      <h2><%= @user.name %></h2>
+      <p>
+        Number of post:
+        <%= @user.posts_counter %>
+        <img class='post-icon' src="https://img.icons8.com/external-outline-juicy-fish/60/null/external-write-contact-us-outline-outline-juicy-fish.png"/>
+      </p>
+    </div>
+  </section>
+  
+  <section class='bio-section'>
+    <h3>Biography</h3>
     <p><%= @user.bio %></p>
-  </div>
+  </section>
   
-  <% @user.posts.each do |post| %>
-    <ul>
-      <li><%= link_to post.title, user_post_path(@user, post) %></li>
-      <li><%= post.text %></li>
-      <li>Comments: <%= post.comments_counter %></li>
-      <li>Likes: <%= post.likes_counter %></li>
-    </ul>
-  <% end %>
+    <ul class='post-list-single-user'>
+  <% @user.check_last_three_posts.each do |post| %>
+      <li>
+        <div class='post-info-data'>
+          <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+          <p><%= post.text %></p>
+        </div>
 
-  <button>
+        <div class='user-post-counters'>
+          <div>
+            <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
+            <p class='post-counter'><%= post.comments_counter %></p>
+          </div>
+
+          <div>
+            <img class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+            <p class='post-counter'><%= post.likes_counter %></p>
+          </div>
+        </div>
+      </li>
+  <% end %>
+    </ul>
+
+  <button class='see-posts'>
   <%= link_to 'See all posts', user_posts_path(@user) %>
   </button>
 
