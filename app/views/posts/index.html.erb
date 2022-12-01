@@ -31,7 +31,7 @@
         </div>
 
         <div class='comments-section'>
-        <% post.comments.each do |comment| %>
+        <% post.check_last_five_comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
         </div>
