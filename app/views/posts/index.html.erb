@@ -1,1 +1,42 @@
-<h1>Full list of posts for a given user...</h1>
+<section class='show-view'>
+    <section class='user-header-section'>
+    <img src='<%= @user.photo %>' alt="<%= @user.name %>'s profile picture"/>
+    <div>
+      <h2><%= @user.name %></h2>
+      <p>
+        Number of post:
+        <%= @user.posts_counter %>
+        <img class='post-icon' src="https://img.icons8.com/external-outline-juicy-fish/60/null/external-write-contact-us-outline-outline-juicy-fish.png"/>
+      </p>
+    </div>
+    </section>
+    <ul class='post-list-single-user'>
+    <% @user.posts.each do |post| %>
+        <li>
+          <div class='post-info-data'>
+            <h3><%= link_to post.title, user_post_path(post.author_id, post) %></h3>
+            <p><%= post.text %></p>
+          </div>
+
+        <div class='user-post-counters'>
+          <div>
+            <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
+            <p class='post-counter'><%= post.comments_counter %></p>
+          </div>
+
+          <div>
+            <img class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+            <p class='post-counter'><%= post.likes_counter %></p>
+          </div>
+        </div>
+
+        <div class='comments-section'>
+        <% post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+        </div>
+    
+        </li>
+    <% end %>
+    </ul>
+</section>

@@ -1,11 +1,31 @@
-<section>
-    <h2>Show specific post for a given user and post id</h2>
+<section class='single-post'>
+  <section class='single-post_body'>
+    <div>
+        <div class='single-post-header'>
+            <h2><%= @post.title %> by <%= @post.author.name %></h2>
+            <div class='single-post-counters'> 
+                <p>
+                <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
+                <%=@post.comments_counter %>
+                </p>
 
-    <ul> 
-        <li>Comments: <%=@post.likes_counter %> </li>
-        <li>Likes: <%=@post.comments_counter %> </li>
-    <ul>
+                <p>
+                <img class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+                <%=@post.likes_counter %>
+                </p>
+            </div>
+        </div>
+        <p class='single-text'><%= @post.text %></p>
+    </div>
 
-    <h3> <%= @post.title %> <h3>
-    <p> <%= @post.text %> </p>
+  <ul class='comments-section single-csection'>
+    <h3>Comments</h3>
+    <% @post.comments.each do |comment| %>
+      <li class='single-li'>
+        <h4><%= comment.author.name %>: <%= comment.text %></h4>
+        <h5>Activity date:<%= comment.created_at %></h5>
+      </li>
+    <% end %>
+  </ul>
+  </section>
 </section>
