@@ -1,0 +1,18 @@
+<section class='post-section'>
+<div class='card-post-container'>
+<h2 class='create-post'>Share your thoughts by adding a <strong class='np'>new post</strong></h2>
+<%= form_with model: @post do |form| %>
+  <div class='post-field'>
+    <%= form.text_field :title, placeholder: 'Title'  %>
+  </div>
+
+  <div class='post-field post-field-text'>
+    <%= form.text_field :text, placeholder: 'Post content...' %>
+  </div>
+
+  <div class='post-field-submit'>
+    <%= form.submit "Submit Post" %>
+  </div>
+<% end %>
+</div>
+</section>
