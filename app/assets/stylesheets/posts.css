@@ -1,3 +1,81 @@
+.add-post-container a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.59);
+  transition: all ease-in-out 0.1s;
+}
+
+.add-post-container a:hover {
+  text-decoration: underline;
+  color: rgb(33, 187, 33);
+}
+
+.card-post-container {
+  background-color: #fff;
+  border: 2px solid rgba(160, 160, 160, 0.4);
+  border-radius: 5px;
+  padding: 20px;
+  transition: all ease 0.2s;
+  margin-top: 20px;
+}
+
+.card-post-container:hover {
+  margin-bottom: 20px;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: rgba(46, 240, 59, 0.4) 0 5px, rgba(46, 240, 46, 0.3) 0 10px, rgba(46, 240, 65, 0.2) 0 15px, rgba(46, 240, 53, 0.1) 0 20px, rgba(46, 240, 56, 0.05) 0 25px;
+}
+
+.create-post {
+  color: rgba(0, 0, 0, 0.589);
+  margin-bottom: 20px;
+}
+
+.post-field input {
+  margin-top: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px !important;
+}
+
+.post-field input[name='post[title]'] {
+  width: 96% !important;
+}
+
+input[type=text] {
+  padding: 8px;
+  width: 79%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 20px 50px -10px, rgba(0, 0, 0, 0.3) 0 10px 30px -30px, rgba(10, 37, 64, 0.35) 0 -1px 3px 0 inset;
+}
+
+.post-field-text input[type=text] {
+  margin-top: 20px;
+  height: 70px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px !important;
+  width: 97% !important;
+  border-radius: 5px 5px 0 0;
+}
+
+input[type=submit] {
+  padding: 8px;
+  border: none;
+  background-color: rgb(33, 187, 33);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0 5px 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.post-field-submit input[type=submit] {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+}
+
 .single-post {
   display: flex;
   justify-content: center;
@@ -84,4 +162,37 @@
 .single-csection {
   display: flex;
   flex-direction: column;
+}
+
+.like-button {
+  padding-left: 10px;
+}
+
+.like-button input[type=submit] {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  transition: all ease 0.2s;
+}
+
+input[type=submit]:active {
+  background-color: rgb(28, 163, 28);
+}
+
+.like-button input[type=submit]:hover {
+  color: rgb(33, 195, 33);
+}
+
+.comment-field {
+  margin-bottom: 10px;
+}
+
+.post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.np {
+  color: rgb(33, 187, 33);
 }

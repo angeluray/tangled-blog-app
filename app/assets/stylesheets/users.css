@@ -135,7 +135,9 @@
 .post-info-data h3,
 .see-posts,
 .comments-section,
-.single-text {
+.single-text,
+.add-post-container,
+.create-post {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -231,8 +233,9 @@
 }
 
 .comments-section {
-  background-color: rgba(225, 225, 225, 0.242);
   color: rgba(0, 0, 0, 0.695);
+  border: 1px solid rgba(225, 225, 225, 0.242);
+  border-radius: 5px;
   font-size: 13px;
   margin-top: 8px;
   padding: 10px;
@@ -240,6 +243,7 @@
 }
 
 .comments-section:hover {
-  background-color: rgba(33, 187, 33, 0.184);
+  background-color: rgba(101, 232, 99, 0.184);
+  border-color: rgb(33, 187, 33);
   color: rgb(0, 0, 0);
 }
