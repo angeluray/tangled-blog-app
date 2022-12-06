@@ -136,7 +136,11 @@ To run tests, run the following command:
 - GitHub: [@angeluray](https://github.com/angeluray)
 - Twitter: [@atangeluray](https://twitter.com/atangeluray)
 - LinkedIn: [Angel Uray](www.linkedin.com/in/angeluray-jobs)
-
+- 
+👤 **Tadesse Jemal**
+- GitHub: [@Tadessejemal1](https://github.com/Tadessejemal1)
+- Twitter: [@twitterhandle](https://twitter.com/tadesse)
+- LinkedIn: [@tadesse-jemal](https://linkedin.com/in/tadesse-jemal)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
