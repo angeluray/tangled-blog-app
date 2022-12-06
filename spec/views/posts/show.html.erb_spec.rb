@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Post Show', type: :feature do
   before(:each) do
     @user = User.create(
-        name: 'Tadessee Jemal',
-        bio: 'Frontend Dev',
-        photo: 'https://media-exp1.licdn.com/dms/image/C4D03AQFbtfe0TyWMCQ/profile-displayphoto-shrink_400_400/0/1664197502811?e=1674086400&v=beta&t=u9a1xs6lQXClOaKzYXwBLindXiieVlS-6NfmuZC_2cI',
-        posts_counter: 0
+      name: 'Tadessee Jemal',
+      bio: 'Frontend Dev',
+      photo: 'https://media-exp1.licdn.com/dms/image/C4D03AQFbtfe0TyWMCQ/profile-displayphoto-shrink_400_400/0/1664197502811?e=1674086400&v=beta&t=u9a1xs6lQXClOaKzYXwBLindXiieVlS-6NfmuZC_2cI',
+      posts_counter: 0
     )
 
     @user1 = User.create(
@@ -28,11 +28,9 @@ RSpec.describe 'Post Show', type: :feature do
     Comment.create(post_id: @post.id, author_id: @user.id, text: 'I am starving no matter when you read this')
     Comment.create(post_id: @post.id, author_id: @user1.id, text: 'You should eat a piece of cake buddy')
     Like.create(post_id: @post.id, author_id: @user1.id)
-
   end
 
   describe 'Displays the entire body comments counters, and title' do
-
     it 'displays the counters' do
       visit user_post_path(@user, @post)
       expect(page).to have_content('Comments counter:3')
@@ -55,9 +53,9 @@ RSpec.describe 'Post Show', type: :feature do
     end
 
     it 'checks there is a comment section' do
-        visit user_post_path(@user, @post)
-        expect(page).to have_css("ul[class*='comments-section']")
-        expect(page).to have_content('Comments')
+      visit user_post_path(@user, @post)
+      expect(page).to have_css("ul[class*='comments-section']")
+      expect(page).to have_content('Comments')
     end
 
     it 'displays all comments with usernames' do

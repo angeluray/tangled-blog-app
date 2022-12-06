@@ -90,6 +90,7 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     erubi (1.11.0)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
@@ -129,9 +130,12 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.9-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.13.9-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
+    pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
     public_suffix (5.0.0)
     puma (5.6.5)
@@ -251,6 +255,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -278,4 +283,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.25
+   2.3.26
