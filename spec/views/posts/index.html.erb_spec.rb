@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Post Index', type: :feature do
   before(:each) do
     @user = User.create(
-        name: 'Angel Uray',
-        bio: 'Software Engineer',
-        photo: 'https://avatars.githubusercontent.com/u/97189760?v=4',
-        posts_counter: 0
+      name: 'Angel Uray',
+      bio: 'Software Engineer',
+      photo: 'https://avatars.githubusercontent.com/u/97189760?v=4',
+      posts_counter: 0
     )
 
     @post1 = Post.create(
@@ -76,7 +76,7 @@ RSpec.describe 'Post Index', type: :feature do
 
     it 'displays number of likes and comments' do
       visit user_posts_path(@user)
-      
+
       # First user post
       expect(page).to have_content('Likes counter:2')
       expect(page).to have_content('Comments counter:6')
