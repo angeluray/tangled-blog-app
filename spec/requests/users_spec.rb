@@ -22,8 +22,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it "Checks for user list info into the body" do
-      expect(response.body).to include("Tom")
-      expect(response.body).to include("Lilly")
+      expect(response.body).to include("Mateo Lane")
     end
   end
 
