@@ -22,7 +22,8 @@ RSpec.describe "Users", type: :request do
     end
 
     it "Checks for user list info into the body" do
-      expect(response.body).to include("<h1>Full list of users...</h1>")
+      expect(response.body).to include("Tom")
+      expect(response.body).to include("Lilly")
     end
   end
 
@@ -38,7 +39,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it "Checks for single user info into the body" do
-      expect(response.body).to include("<h2>Username: Mateo Lane</h2>")
+      expect(response.body).to include("Mateo Lane")
     end
   end
 end
