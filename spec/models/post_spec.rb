@@ -40,7 +40,7 @@ RSpec.describe Post, type: :model do
     expect(post).to be_valid
   end
 
-  it 'is not valid if comment counter is less than 0' do
+  it 'is not valid if the comment counter is less than 0' do
     post.comments_counter = -1
     expect(post).to_not be_valid
   end

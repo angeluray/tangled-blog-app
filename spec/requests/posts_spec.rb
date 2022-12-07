@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Posts", type: :request do
   before(:each) do
     @user = User.create(name: 'Mateo Lane', photo: 'https://unsplash.com/photos/mateopic',
-                        bio: 'Comedian, Italian, stylish, and part time youtuber', posts_counter: 5)
+                        bio: 'Comedian, Italian, stylish, and part time youtuber', posts_counter: 0)
     @post = Post.create(author: @user, title: 'My first post', text: 'This is my first post', comments_counter: 1,
                         likes_counter: 1)
   end
@@ -20,7 +20,8 @@ RSpec.describe "Posts", type: :request do
     end
 
     it "Checks for full list of posts info into the body" do
-      expect(response.body).to include("<h1>Full list of posts for a given user...</h1>")
+      expect(response.body).to include("Number of post:\n        1\n")
+      expect(response.body).to include("This is my first post")
     end
   end
 
@@ -36,7 +37,8 @@ RSpec.describe "Posts", type: :request do
     end
 
     it "Checks for single post info into the body" do
-      expect(response.body).to include("<h2>Show specific post for a given user and post id</h2>")
+      expect(response.body).to include("My first post by Mateo Lane")
+      expect(response.body).to_not include("My second post by Mateo Lane")
     end
   end
 end
