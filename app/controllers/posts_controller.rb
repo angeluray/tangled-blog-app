@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post.author = current_user
 
     @post.save
-    redirect_to user_posts_path(@user)
+    redirect_to user_posts_path(current_user)
   end
 
   private
