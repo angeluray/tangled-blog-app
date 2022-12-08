@@ -28,12 +28,9 @@
   width: 100%;
   margin-left: 10px;
   border-radius: 5px !important;
-  transition: all ease-in-out 0.2s;
-}
-
-.actions input {
   background-color: rgb(20, 137, 30);
   margin-top: 20px;
+  transition: all ease-in-out 0.2s;
 }
 
 .sign-up-message,
@@ -123,6 +120,13 @@
   font-size: 14px;
 }
 
+.shared-links-css a {
+  color: rgba(183, 183, 183, 0.764);
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease 0.2s;
+  font-size: 14px;
+}
+
 .cancel-account-css a:hover {
   color: rgb(32, 208, 22);
 }
@@ -134,14 +138,6 @@
   margin-top: 80px;
 }
 
-.shared-links-css a {
-  color: rgba(183, 183, 183, 0.764);
-  font-family: 'Montserrat', sans-serif;
-  transition: all ease 0.2s;
-  font-size: 14px;
-}
-
 .shared-links-css a:hover {
   color: rgb(31, 189, 49);
 }
-
