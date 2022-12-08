@@ -137,7 +137,9 @@
 .comments-section,
 .single-text,
 .add-post-container,
-.create-post {
+.create-post,
+.customizable-post,
+.edit {
   font-family: 'Montserrat', sans-serif;
 }
 
