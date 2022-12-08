@@ -61,8 +61,8 @@ input[type=text] {
 input[type=submit] {
   padding: 8px;
   border: none;
-  background-color: rgb(33, 187, 33);
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: rgb(31, 31, 31);
   font-weight: 600;
   border-radius: 0 5px 5px 0;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
