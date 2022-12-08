@@ -1,11 +1,11 @@
 <section class='user-section'>
-<h3>This are all the users</h3>
+<h3>These are all the active users</h3>
   <ul class='user-container'>
 <% @users.each do |user| %>
     <li class='user-index-card'>
       <img class='profile-index-photo' src='<%= user.photo %>' alt="<%= user.name %>'s profile picture" />
       <div class='user-index-container'>
-        <h2><%= link_to user.name, user_path(user) %></h2>
+        <h2><%= link_to user.name, user_path(user.id) %></h2>
         <p>Number of Posts: <%= user.posts_counter %></p>
       </div>
     </li>

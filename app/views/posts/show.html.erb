@@ -24,8 +24,30 @@
       <li class='single-li'>
         <h4><%= comment.author.name %>: <%= comment.text %></h4>
         <h5>Activity date:<%= comment.created_at %></h5>
+        <% if can? :destroy, comment %>
+            <%= link_to "delete", comment_path(comment), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"
+            } %>
+          <% end %>
       </li>
     <% end %>
+  </ul>
+
+  <ul>
+      <li>
+       <% if can? :update, @post %>
+         <%= link_to "Edit post", edit_post_path(@post) %>
+       <% end %>
+     </li>
+     <li>
+       <% if can? :destroy, @post %>
+         <%= link_to "Delete post", post_path(@post), data: {
+                         turbo_method: :delete,
+                         turbo_confirm: "Are you sure you want to delete this post?"
+                      } %>
+       <% end %>
+     </li>
   </ul>
   </section>
 </section>
