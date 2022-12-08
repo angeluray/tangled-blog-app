@@ -30,12 +30,10 @@ class PostsController < ApplicationController
 
     @post.update(post_params)
     redirect_to post_path(@post)
-    end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    @post = Post.find(params[:id]).destroy
 
     redirect_to root_path, status: :see_other
   end
