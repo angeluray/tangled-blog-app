@@ -6,7 +6,7 @@
       <img class='profile-index-photo' src='<%= user.photo %>' alt="<%= user.name %>'s profile picture" />
       <div class='user-index-container'>
         <h2><%= link_to user.name, user_path(user.id) %></h2>
-        <p>Number of Posts: <%= user.posts_counter %></p>
+        <p>Posts: <%= user.posts.count %></p>
       </div>
     </li>
 <% end %>

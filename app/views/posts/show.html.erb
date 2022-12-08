@@ -6,12 +6,12 @@
             <div class='single-post-counters'> 
                 <p>
                 <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
-                Comments counter:<%=@post.comments_counter %>
+                Comments:<%=@post.comments.count %>
                 </p>
 
                 <p>
                 <img class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
-                Likes counter:<%=@post.likes_counter %>
+                Likes:<%=@post.likes_counter %>
                 </p>
             </div>
         </div>
@@ -27,14 +27,14 @@
         <% if can? :destroy, comment %>
             <%= link_to "delete", comment_path(comment), data: {
               turbo_method: :delete,
-              turbo_confirm: "Are you sure?"
+              turbo_confirm: "Do you want to delete de comment?"
             } %>
           <% end %>
       </li>
     <% end %>
   </ul>
 
-  <ul>
+  <ul class='customizable-post'>
       <li>
        <% if can? :update, @post %>
          <%= link_to "Edit post", edit_post_path(@post) %>

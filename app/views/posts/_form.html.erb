@@ -1,5 +1,6 @@
 <%= form_with model: @post do |form| %>
-  <div>
+<div class="edit-card card-post-container">
+  <div class='locator-field'>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% post.errors.full_messages_for(:title).each do |message| %>
@@ -7,7 +8,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class='locator-field'>
     <%= form.label :Text %><br>
     <%= form.text_area :text %><br>
     <% post.errors.full_messages_for(:text).each do |message| %>
@@ -15,7 +16,8 @@
     <% end %>
   </div>
 
-  <div>
+  <div class='custom-btn'>
     <%= form.submit "Submit Post" %>
   </div>
+</div>
 <% end %>
