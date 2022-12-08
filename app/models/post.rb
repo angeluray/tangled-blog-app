@@ -4,8 +4,8 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
   after_save :update_posts_counter
 
-  validates :title, presence: true, length: { minimum: 3, maximum: 250 }
-  validates :text, presence: true, length: { minimum: 3, maximum: 250 }
+  # validates :title, presence: true, length: { minimum: 3, maximum: 250 }
+  # validates :text, presence: true, length: { minimum: 3, maximum: 250 }
 
   def check_last_five_comments
     comments.order(created_at: :desc).limit(5)

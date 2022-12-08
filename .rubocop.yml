@@ -27,6 +27,8 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 50
+Lint/UselessMethodDefinition:
+ Enabled: false
 
 Style/Documentation:
   Enabled: false

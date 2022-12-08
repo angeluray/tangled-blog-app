@@ -1,0 +1,143 @@
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.field,
+.actions {
+  width: 500px;
+}
+
+#user_email,
+#user_password,
+#user_name,
+#user_password_confirmation,
+#user_current_password {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 20px 50px -10px, rgba(0, 0, 0, 0.3) 0 10px 30px -30px, rgba(10, 37, 64, 0.35) 0 -1px 3px 0 inset;
+}
+
+.actions input {
+  width: 100%;
+  margin-left: 10px;
+  border-radius: 5px !important;
+  background-color: rgb(20, 137, 30);
+  margin-top: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+.sign-up-message,
+.sign-in-message {
+  width: 20%;
+  margin: 50px 48%;
+  font-family: 'Montserrat', sans-serif;
+  overflow-wrap: normal;
+}
+
+.edit-user-css {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.edit-user-css h2 {
+  color: rgb(43, 43, 43);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+}
+
+.italic-custom-name {
+  color: rgb(25, 173, 38);
+}
+
+#edit_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cancel-account-css {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.cancel-account-css h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(43, 43, 43);
+  font-size: 20px;
+}
+
+.cancel-account-css div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cancel-account-css div form button {
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.449);
+  padding: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.cancel-account-css div form button:hover {
+  background-color: rgb(33, 187, 33);
+  border-color: rgb(39, 184, 53);
+  color: #fff;
+}
+
+.cancel-account-css div form button:active {
+  background-color: rgb(21, 117, 21);
+  border-color: rgb(39, 184, 53);
+}
+
+.unhappy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+
+.cancel-account-css a {
+  color: rgba(183, 183, 183, 0.764);
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease 0.2s;
+  font-size: 14px;
+}
+
+.shared-links-css a {
+  color: rgba(183, 183, 183, 0.764);
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease 0.2s;
+  font-size: 14px;
+}
+
+.cancel-account-css a:hover {
+  color: rgb(32, 208, 22);
+}
+
+.shared-links-css {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 80px;
+}
+
+.shared-links-css a:hover {
+  color: rgb(31, 189, 49);
+}
