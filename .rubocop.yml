@@ -31,6 +31,8 @@ Lint/UselessMethodDefinition:
  Enabled: false
 Style/RedundantAssignment:
  Enabled: false
+Style/RedundantConstantBase:
+ Enabled: false
 
 Style/Documentation:
   Enabled: false
