@@ -4,6 +4,18 @@
   transition: all ease-in-out 0.1s;
 }
 
+.single-li a {
+  color: rgb(20, 177, 41);
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease 0.2s;
+}
+
+.customizable-post li a {
+  text-decoration: none !important;
+  color: rgba(94, 94, 94, 0.741);
+  transition: all ease-in-out 0.1s;
+}
+
 .add-post-container a:hover {
   text-decoration: underline;
   color: rgb(33, 187, 33);
@@ -147,11 +159,16 @@ input[type=submit] {
 
 .single-li {
   margin-top: 5px;
+  margin-bottom: 8px;
 }
 
 .single-li h5 {
   font-size: 12px;
   font-weight: 500;
+}
+
+.single-li a:hover {
+  color: rgb(255, 68, 0);
 }
 
 .comments-section h3 {
@@ -195,4 +212,13 @@ input[type=submit]:active {
 
 .np {
   color: rgb(33, 187, 33);
+}
+
+.customizable-post {
+  list-style-type: none;
+}
+
+.customizable-post li a:hover {
+  text-decoration: underline !important;
+  color: rgba(35, 192, 26, 0.741);
 }

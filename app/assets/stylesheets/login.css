@@ -16,7 +16,8 @@
 #user_password,
 #user_name,
 #user_password_confirmation,
-#user_current_password {
+#user_current_password,
+.locator-field textarea {
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -140,4 +141,37 @@
 
 .shared-links-css a:hover {
   color: rgb(31, 189, 49);
+}
+
+.edit-card {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.locator-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.locator-field input {
+  width: 80%;
+}
+
+.locator-field textarea {
+  width: 80%;
+  padding: 3px;
+  height: 100px;
+}
+
+.custom-btn input {
+  margin-top: 20px;
+  width: 100% !important;
+}
+
+.edit {
+  margin-top: 20px;
+  text-align: center;
 }

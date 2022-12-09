@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
   end
@@ -17,6 +19,23 @@ class PostsController < ApplicationController
 
     @post.save
     redirect_to user_posts_path(current_user)
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+
+    @post.update(post_params)
+    redirect_to post_path(@post)
+  end
+
+  def destroy
+    @post = Post.find(params[:id]).destroy
+
+    redirect_to root_path, status: :see_other
   end
 
   private

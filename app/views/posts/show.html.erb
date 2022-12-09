@@ -6,12 +6,12 @@
             <div class='single-post-counters'> 
                 <p>
                 <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
-                Comments counter:<%=@post.comments_counter %>
+                Comments:<%=@post.comments.count %>
                 </p>
 
                 <p>
                 <img class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
-                Likes counter:<%=@post.likes_counter %>
+                Likes:<%=@post.likes_counter %>
                 </p>
             </div>
         </div>
@@ -24,8 +24,30 @@
       <li class='single-li'>
         <h4><%= comment.author.name %>: <%= comment.text %></h4>
         <h5>Activity date:<%= comment.created_at %></h5>
+        <% if can? :destroy, comment %>
+            <%= link_to "delete", comment_path(comment), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Do you want to delete de comment?"
+            } %>
+          <% end %>
       </li>
     <% end %>
+  </ul>
+
+  <ul class='customizable-post'>
+      <li>
+       <% if can? :update, @post %>
+         <%= link_to "Edit post", edit_post_path(@post) %>
+       <% end %>
+     </li>
+     <li>
+       <% if can? :destroy, @post %>
+         <%= link_to "Delete post", post_path(@post), data: {
+                         turbo_method: :delete,
+                         turbo_confirm: "Are you sure you want to delete this post?"
+                      } %>
+       <% end %>
+     </li>
   </ul>
   </section>
 </section>
