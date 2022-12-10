@@ -57,6 +57,11 @@ gem 'cancancan'
 
 # Json Web Token
 gem 'jwt'
+gem 'rswag'
+
+gem 'pagy'
+
+gem 'bullet', group: 'development'
 
 # ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

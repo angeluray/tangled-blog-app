@@ -74,6 +74,9 @@ GEM
     bootsnap (1.14.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.4)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     cancancan (3.4.0)
     capybara (3.38.0)
       addressable
@@ -116,6 +119,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.2)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
     jwt (2.5.0)
     launchy (2.5.0)
       addressable (~> 2.7)
@@ -146,6 +151,8 @@ GEM
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (5.10.1)
+      activesupport
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -214,6 +221,20 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    rswag (2.8.0)
+      rswag-api (= 2.8.0)
+      rswag-specs (= 2.8.0)
+      rswag-ui (= 2.8.0)
+    rswag-api (2.8.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.8.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.8.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.39.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -253,6 +274,7 @@ GEM
     tzinfo-data (1.2022.6)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.3.0)
+    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -279,6 +301,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
+  bullet
   cancancan
   capybara
   debug
@@ -289,11 +312,13 @@ DEPENDENCIES
   jbuilder
   jwt
   letter_opener
+  pagy
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   rails-controller-testing
   rspec-rails
+  rswag
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails
